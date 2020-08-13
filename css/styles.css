@@ -179,8 +179,6 @@ ul {
 
 .navigation_bottom_banner ul li:hover {
     background: var(--primary_color_dark);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
 }
 
 .navigation_bottom_banner ul li:hover p {
