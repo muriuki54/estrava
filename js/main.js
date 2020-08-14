@@ -72,7 +72,7 @@ carouselNextButton1.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel1.getBoundingClientRect().right
 
-    if((childX ) < parentX) return
+    if((childX + 50) < parentX) return
 
     startIndex1++
     productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
@@ -91,7 +91,7 @@ carouselNextButton2.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel2.getBoundingClientRect().right
 
-    if((childX ) < parentX) return
+    if((childX + 50) < parentX) return
     startIndex2++
     productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
 })
@@ -101,16 +101,13 @@ carouselPreviousButton3.addEventListener('click', function() {
     if(startIndex3 === 0) return
     startIndex3--
     productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
-
-    console.log(productsCarousel3.getBoundingClientRect().x)
-
 })
 
 carouselNextButton3.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel3.getBoundingClientRect().right
 
-    if((childX ) < parentX) return
+    if((childX + 50) < parentX) return
 
     startIndex3++
     productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
