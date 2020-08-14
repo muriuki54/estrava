@@ -84,7 +84,7 @@ ul {
 }
 
 .navigation_top_banner_icon {
-    margin: 0px 5px;
+    margin: 0px 0px;
     position: relative;
     color: #fff;
     width: 35px;
@@ -177,28 +177,26 @@ ul {
     margin: 0;
 }
 
-.navigation_bottom_banner ul li:hover {
+.navigation_bottom_banner ul li p:hover {
+    /* color: #fff; */
+    margin: auto;
     background: var(--primary_color_dark);
 }
 
-.navigation_bottom_banner ul li:hover p {
-    color: #fff;
-    margin: auto;
-}
-
-.navigation_bottom_banner ul li:hover ul {
-    display: block;
-}
-
-.navigation_bottom_banner ul li {
+.navigation_bottom_banner ul li p{
     color: #fff;
     cursor: pointer;
 }
 
-#navigation.opaque_bg .navigation_bottom_banner ul li {
+#navigation.opaque_bg .navigation_bottom_banner ul li p {
     color: #262626;
 }
-.navigation_bottom_banner ul li ul {
+#navigation.opaque_bg .navigation_bottom_banner ul li:hover p {
+    color: #fff;
+    background: var(--primary_color_dark);
+
+}
+.navigation_bottom_banner ul li ul.sub_menu {
     display: none;
     border-top: 3px solid var(--primary_color_dark);
     width: 100%;
@@ -209,6 +207,35 @@ ul {
     -webkit-box-shadow: 0px 16px 21px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 16px 21px -5px rgba(0,0,0,0.75);
      box-shadow: 0px 16px 21px -5px rgba(0,0,0,0.75)
+}
+
+/* .navigation_bottom_banner ul li:nth-child(1) ul.sub_menu, */
+.navigation_bottom_banner ul li:hover ul.sub_menu{
+    display: flex;
+}
+
+.sub_menu_item_title {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.sub_menu_item_title span{
+    font-size: 30px;
+}
+
+.sub_menu_item_list_item {
+    margin: 5px 0px;
+}
+
+.sub_menu_item_list_item a {
+    z-index: 999;
+}
+
+.sub_menu_item_list_item a,
+.sub_menu_item_list_item span {
+    color: #262626;
+    font-size: 14px;
 }
 
 /* 2: HERO SECTION */
@@ -509,6 +536,10 @@ footer ul li a {
     }
     .navigation_top_banner_search_form  {
         grid-template-columns: 1fr 50% 1fr;
+    }
+
+    .navigation_top_banner_icon {
+        margin: 0px 8px;
     }
     
     .navigation_bottom_banner {

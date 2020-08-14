@@ -88,9 +88,15 @@ carouselPreviousButton3.addEventListener('click', function() {
     if(startIndex3 === 0) return
     startIndex3--
     productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+
+    console.log(productsCarousel3.getBoundingClientRect().x)
+
 })
 
 carouselNextButton3.addEventListener('click', function() {
     startIndex3++
     productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+
+    console.log(productsCarousel3.getBoundingClientRect().left)
+    
 })
