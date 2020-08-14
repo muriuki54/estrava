@@ -1,6 +1,8 @@
 let navigation = document.querySelector('#navigation'),
 
-    productCards = document.querySelectorAll('.product_on_sale_cards'),
+    productCards = document.querySelectorAll('.products_on_sale_card'),
+
+    productCardsContainers = document.querySelectorAll('#home_products_on_sale'),
     productCards1 = document.querySelectorAll('.product_on_sale_cards_1 .products_on_sale_card'),
     productCards2 = document.querySelectorAll('.product_on_sale_cards_2 .products_on_sale_card'),
     productCards3 = document.querySelectorAll('.product_on_sale_cards_3 .products_on_sale_card'),
@@ -67,8 +69,15 @@ carouselPreviousButton1.addEventListener('click', function() {
 })
 
 carouselNextButton1.addEventListener('click', function() {
+    let parentX = productCardsContainers[0].getBoundingClientRect().right
+    let childX = productsCarousel1.getBoundingClientRect().right
+
+    if((childX ) < parentX) return
+
     startIndex1++
     productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
+
+    
 })
 
 // carousel 2
@@ -79,6 +88,10 @@ carouselPreviousButton2.addEventListener('click', function() {
 })
 
 carouselNextButton2.addEventListener('click', function() {
+    let parentX = productCardsContainers[0].getBoundingClientRect().right
+    let childX = productsCarousel2.getBoundingClientRect().right
+
+    if((childX ) < parentX) return
     startIndex2++
     productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
 })
@@ -94,9 +107,12 @@ carouselPreviousButton3.addEventListener('click', function() {
 })
 
 carouselNextButton3.addEventListener('click', function() {
+    let parentX = productCardsContainers[0].getBoundingClientRect().right
+    let childX = productsCarousel3.getBoundingClientRect().right
+
+    if((childX ) < parentX) return
+
     startIndex3++
     productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
-
-    console.log(productsCarousel3.getBoundingClientRect().left)
     
 })
