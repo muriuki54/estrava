@@ -7,6 +7,10 @@ let navigation = document.querySelector('#navigation'),
     parentMenuListItem = document.querySelectorAll('.navigation_bottom_banner_parent_list li'),
     subMenus = document.querySelectorAll('.sub_menu'),
 
+    searchBox = document.querySelector('#search_textbox'),
+    searchTerm = document.querySelectorAll('.search_term'),
+    searchResults = document.querySelector('.search_results'),
+
     productCards = document.querySelectorAll('.products_on_sale_card'),
 
     productCardsContainers = document.querySelectorAll('#home_products_on_sale'),
@@ -95,6 +99,25 @@ parentMenuListItem.forEach((item, index) => {
     })
 })
 
+// THE SEARCH FORM
+
+function displaySearchResults() {
+    if(searchBox.value !== '') {
+        searchResults.style.display = 'flex'
+    } else {
+        searchResults.style.display = 'none'
+    }
+}
+
+displaySearchResults()
+
+searchBox.addEventListener('keyup', function(e) {
+    displaySearchResults()
+
+    searchTerm.forEach((span, index) => {
+        span.innerText = e.target.value
+    })
+})
 
 // SHOW ADD_TO_FAVORITE ICON WHEN CARD IS HOVERED
 productCards.forEach((card, index) => {
