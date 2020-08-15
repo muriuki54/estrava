@@ -668,6 +668,19 @@ footer ul li a {
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
+
+    .bold_heading {
+        font-size: 1.5rem !important;
+    }
+
+    .bold_heading.p-4 {
+        padding: 1rem !important;
+    }
+
+    #hero_section {
+        height: 90vh;
+    }
+
     footer .container,
     .footer_links {
         display: flex;
