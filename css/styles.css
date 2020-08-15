@@ -74,9 +74,15 @@ ul {
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
+#navigation .logo{
+    font-size: 1rem;
+    text-transform: lowercase;
+}
 
 #navigation.opaque_bg .logo{
-    color: #262626;
+    color: var(--primary_color_dark);
+    font-size: 1rem;
+    text-transform: lowercase;
 }
 
 .navigation_top_banner_search_form {
@@ -86,8 +92,8 @@ ul {
 
 .expand_menu_button {
     display: none;
-    width: 52px;
-    height: 48px;
+    width:35px;
+    height: 35px;
     margin-right: 10px;
     background: var(--primary_color_dark);
     color: #fff;
@@ -100,10 +106,10 @@ ul {
 }
 
 .expand_menu_button div {
-    height: 3px;
-    width: 30px;
+    height: 2px;
+    width: 18px;
     background: #fff;
-    margin: 3px 0px;
+    margin: 2px 0px;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -112,21 +118,21 @@ ul {
 }
 
 .expand_menu_button.close div:nth-of-type(1) {
-    transform: rotate(45deg) translate(4px, 4px);
-    -webkit-transform: rotate(45deg) translate(4px, 4px);
-    -moz-transform: rotate(45deg) translate(4px, 4px);
-    -ms-transform: rotate(45deg) translate(4px, 4px);
-    -o-transform: rotate(45deg) translate(4px, 4px);
+    transform: rotate(45deg) translate(2px, 3px);
+    -webkit-transform: rotate(45deg) translate(2px, 3px);
+    -moz-transform: rotate(45deg) translate(2px, 3px);
+    -ms-transform: rotate(45deg) translate(2px, 3px);
+    -o-transform: rotate(45deg) translate(2px, 3px);
 }
 .expand_menu_button.close div:nth-of-type(2) {
    display: none;
 }
 .expand_menu_button.close div:nth-of-type(3) {
-    transform: rotate(-45deg) translate(4px, -3px);
-    -webkit-transform: rotate(-45deg) translate(4px, -3px);
-    -moz-transform: rotate(-45deg) translate(4px, -3px);
-    -ms-transform: rotate(-45deg) translate(4px, -3px);
-    -o-transform: rotate(-45deg) translate(4px, -3px);
+    transform: rotate(-45deg) translate(2px, -1px);
+    -webkit-transform: rotate(-45deg) translate(2px, -1px);
+    -moz-transform: rotate(-45deg) translate(2px, -1px);
+    -ms-transform: rotate(-45deg) translate(2px, -1px);
+    -o-transform: rotate(-45deg) translate(2px, -1px);
 }
 .navigation_top_banner_search_form form {
     width: 100%;
