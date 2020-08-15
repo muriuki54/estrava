@@ -422,289 +422,174 @@
             </div>
 
     </header>
+<section id="product_description">
+    <div class="wrapper">
+        <!------bootstrap row  -->
+        
+        <div class="row">
 
-    <!-------- CATEGORY PRODUCTS / FILTER SIDEBAR-------------->
-    <section id="category_products_page">
-        <div class="wrapper">
-            <!----- boostrap row-->
-            <div class="row">
-                <!------ breadcrumb -->
-                <div class="col-md-12 col-sm-12 mt-2">
+             <!------ breadcrumb -->
+             <div class="col-md-12 col-sm-12 mt-2">
                     
-                    <ul class="bread_crumb py-1">
-                        <li class="bread_crumb_item"><a href="./index.html"><small>Home</small></a></li>
-                        <li class="bread_crumb_item"><a href="./category.html"><small>Furniture</small></a></li>
-                    </ul>
-
-                </div>
-                <!--------end breadcrumb-->
-                <!-----------filter ---------------------------->
-                <div class="col-md-2 col-sm-12 p-2">
-                    <h6 class="p-4 bold_heading">Filter selection</h6>
-                    <div class="filter_category_products_form">
-                        <form action="">
-                            <!----a filter option eg: price-->
-                            <div class="filter_category_products_form_option">
-                                <strong class="py-2"><span class="material-icons"> expand_more </span> Price</strong>
-                                <ul class="filter_category_products_form_option_list">
-                                    
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Min</label>
-                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Min price">
-                                          </div>
-                                    </li>
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Max</label>
-                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Max price">
-                                          </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!----a filter option eg: color-->
-                            <div class="filter_category_products_form_option">
-                                <strong class="py-2"><span class="material-icons"> expand_more </span> Color</strong>
-                                <ul class="filter_category_products_form_option_list">
-                                    
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <label class="form-check-label" for="defaultCheck1">Black</label>
-                                          </div>
-                                    </li>
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <label class="form-check-label" for="defaultCheck1">Beige</label>
-                                          </div>
-                                    </li>
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <label class="form-check-label" for="defaultCheck1">White</label>
-                                          </div>
-                                    </li>
-                                    <li class="filter_category_products_form_option_listitem"></li>
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <label class="form-check-label" for="defaultCheck1">Midnight black?</label>
-                                          </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!----a filter option eg: size-->
-                            <div class="filter_category_products_form_option">
-                                <strong class="py-2"><span class="material-icons"> expand_more </span> Size</strong>
-                                <ul class="filter_category_products_form_option_list">
-                                    
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                            <label class="form-check-label" for="exampleRadios1"> 4 x 6</label>
-                                          </div>
-                                    </li>
-                                    <li class="filter_category_products_form_option_listitem">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                            <label class="form-check-label" for="exampleRadios1"> 5 x 6</label>
-                                          </div>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-
-                            <button type="submit" class="primary_button submit_filter_options">Sort & filter</button>
-                        </form>
-                    </div>
-                </div>
-                <!---------------products ---------------------->
-                <div class="col-md-10 col-sm-12 p-2">
-                    
-                    <h2 class="p-4 bold_heading">Furniture</h2>
-                    <div class="category_product_cards">
-
-                    <div class="products_on_sale_card">
-                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
-                        <div class="product_offer small_text"> -10%</div>
-                        <div class="products_on_sale_card_image">
-                            <img src="./img/cat.jpg" alt="">
-                        </div>
-                        <div class="products_on_sale_card_content">
-                            <small class="product_on_sale_category_title small_text">cats</small>
-                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
-                            <hr />
-                            
-                            <small class="previous_product_price small_text">£ 145, 64</small>
-                            <div class="current_product_price"><p>£ 123,45</p></div>
-                             <div class="learn_more_links">
-                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
-                                        <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
-                                </div>
-                        </div>
-                    </div>
-
-                    <div class="products_on_sale_card">
-                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
-                        <div class="product_offer small_text"> -10%</div>
-                        <div class="products_on_sale_card_image">
-                            <img src="./img/cat.jpg" alt="">
-                        </div>
-                        <div class="products_on_sale_card_content">
-                            <small class="product_on_sale_category_title small_text">cats</small>
-                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
-                            <hr />
-                            
-                            <small class="previous_product_price small_text">£ 145, 64</small>
-                            <div class="current_product_price"><p>£ 123,45</p></div>
-                             <div class="learn_more_links">
-                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
-                                        <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
-                                </div>
-                        </div>
-                    </div>
-
-                    <div class="products_on_sale_card">
-                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
-                        <div class="product_offer small_text"> -10%</div>
-                        <div class="products_on_sale_card_image">
-                            <img src="./img/cat.jpg" alt="">
-                        </div>
-                        <div class="products_on_sale_card_content">
-                            <small class="product_on_sale_category_title small_text">cats</small>
-                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
-                            <hr />
-                            
-                            <small class="previous_product_price small_text">£ 145, 64</small>
-                            <div class="current_product_price"><p>£ 123,45</p></div>
-                             <div class="learn_more_links">
-                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
-                                        <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
-                                </div>
-                        </div>
-                    </div>
-
-                    <div class="products_on_sale_card">
-                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
-                        <div class="product_offer small_text"> -10%</div>
-                        <div class="products_on_sale_card_image">
-                            <img src="./img/cat.jpg" alt="">
-                        </div>
-                        <div class="products_on_sale_card_content">
-                            <small class="product_on_sale_category_title small_text">cats</small>
-                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
-                            <hr />
-                            
-                            <small class="previous_product_price small_text">£ 145, 64</small>
-                            <div class="current_product_price"><p>£ 123,45</p></div>
-                             <div class="learn_more_links">
-                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
-                                        <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
-                                </div>
-                        </div>
-                    </div>
-
-                    <div class="products_on_sale_card">
-                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
-                        <div class="product_offer small_text"> -10%</div>
-                        <div class="products_on_sale_card_image">
-                            <img src="./img/cat.jpg" alt="">
-                        </div>
-                        <div class="products_on_sale_card_content">
-                            <small class="product_on_sale_category_title small_text">cats</small>
-                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
-                            <hr />
-                            
-                            <small class="previous_product_price small_text">£ 145, 64</small>
-                            <div class="current_product_price"><p>£ 123,45</p></div>
-                             <div class="learn_more_links">
-                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
-                                        <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
-                                </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="pagination">
-                   <a href="./category.html?page1"><button class="primary_button ml-2">1</button></a>
-                   <a href="./category.html?page2"><button class="primary_button ml-2">2</button></a>
-                   <a href="./category.html?page3"><button class="primary_button ml-2">3</button></a>
-                   <a href="./category.html?page4"><button class="primary_button ml-2">4</button></a>
-                   
-                   <a href="./category.html?page49"><button class="primary_button ml-2">Last</button></a>
-                </div>
-            </div>
-                <!--- end products-->
-            </div>
-            <!-- end bootstrap row-->
-        </div>
-    </section>
-
-    <!---------FOOTER ------------->
-    <footer>
-        <div class="container">
-        <div class="footer_logo">
-            <h1>ESTRAVA</h1>
-
-            <div class="footer_social">
-                <strong class="transform_uppercase">SOCIAL</strong>
-                <div class="footer_social_icons">
-                    <div class="facebook_icon"><span class="material-icons">facebook</span></div>
-                    <div class="rss_icon"><span class="material-icons">rss_feed</span></div>
-                    <div class="connect_icon"><span class="material-icons">connect_without_contact</span></div>
-                    <div class="notification_icon"><span class="material-icons">notifications_active</span></div>
-                </div>
-            </div>
-    
-        </div>
-
-       
-        <div class="footer_links">
-            <div class="footer_links_left">
-                <h6 class="transform_uppercase">ORDER INFORMATION</h6>
-                <ul>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
+                <ul class="bread_crumb py-1">
+                    <li class="bread_crumb_item"><a href="./index.html"><small>Home</small></a></li>
+                    <li class="bread_crumb_item"><a href="./product.html"><small>Product Name</small></a></li>
                 </ul>
-            </div>
-            <div class="footer_links_middle">
-                <h6 class="transform_uppercase">ABOUT ESTRAVA</h6>
-                <ul>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                </ul>
-            </div>
-            <div class="footer_links_right">
-                <h6 class="transform_uppercase">SERVICES</h6>
-                <ul>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                    <li><a href="#">a link</a></li>
-                </ul>
-            </div>
-        </div>
-        </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+            </div>
+
+            <div class="col-md-12 col-sm-12"><h2 class="bold_heading py-2">Authentic fossilized mosasaur tooth</h2></div>
+
+            <!---- product carousel -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="product_images_carousel">
+                        <img src="./img/fossilized-shark-tooth.jpg" alt="">
+                    </div>
+                </div>
+            <!---- end product carousel -->
+
+            <!------ product description -->
+            <div class="col-md-6 col-sm-12">
+
+            </div>
+            <!------ end product description -->
+
+
+        </div>
+
+        <!---- related products  -->
+
+        <div class="col-md-12 col-sm-12">
+            <h3 class="bold_heading">Related Products</h3>
+            <div class="related_products_cards">
+                <div class="products_on_sale_card">
+                    <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                    <div class="product_offer small_text"> -10%</div>
+                    <div class="products_on_sale_card_image">
+                        <img src="./img/45-calibre-gun-key.jpg" alt="">
+                    </div>
+                    <div class="products_on_sale_card_content">
+                        <small class="product_on_sale_category_title small_text">home security</small>
+                        <div class="product_title"><strong>.45 calibre gun key</strong></div>
+                        <hr />
+                        
+                        <small class="previous_product_price small_text">£ 1200, 64</small>
+                        <div class="current_product_price"><p>£ 1150,45</p></div>
+                         <div class="learn_more_links">
+                                    <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                    <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="products_on_sale_card">
+                    <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                    <div class="product_offer small_text"> -10%</div>
+                    <div class="products_on_sale_card_image">
+                        <img src="./img/45-calibre-gun-key.jpg" alt="">
+                    </div>
+                    <div class="products_on_sale_card_content">
+                        <small class="product_on_sale_category_title small_text">home security</small>
+                        <div class="product_title"><strong>.45 calibre gun key</strong></div>
+                        <hr />
+                        
+                        <small class="previous_product_price small_text">£ 1200, 64</small>
+                        <div class="current_product_price"><p>£ 1150,45</p></div>
+                         <div class="learn_more_links">
+                                    <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                    <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="products_on_sale_card">
+                    <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                    <div class="product_offer small_text"> -10%</div>
+                    <div class="products_on_sale_card_image">
+                        <img src="./img/45-calibre-gun-key.jpg" alt="">
+                    </div>
+                    <div class="products_on_sale_card_content">
+                        <small class="product_on_sale_category_title small_text">home security</small>
+                        <div class="product_title"><strong>.45 calibre gun key</strong></div>
+                        <hr />
+                        
+                        <small class="previous_product_price small_text">£ 1200, 64</small>
+                        <div class="current_product_price"><p>£ 1150,45</p></div>
+                         <div class="learn_more_links">
+                                    <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                    <a href="./product.html" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------ end bootstrap row  -->
+
+    </div>
+</section>
+
+<!---------FOOTER ------------->
+<footer>
+    <div class="container">
+    <div class="footer_logo">
+        <h1>ESTRAVA</h1>
+
+        <div class="footer_social">
+            <strong class="transform_uppercase">SOCIAL</strong>
+            <div class="footer_social_icons">
+                <div class="facebook_icon"><span class="material-icons">facebook</span></div>
+                <div class="rss_icon"><span class="material-icons">rss_feed</span></div>
+                <div class="connect_icon"><span class="material-icons">connect_without_contact</span></div>
+                <div class="notification_icon"><span class="material-icons">notifications_active</span></div>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <div class="footer_links">
+        <div class="footer_links_left">
+            <h6 class="transform_uppercase">ORDER INFORMATION</h6>
+            <ul>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+            </ul>
+        </div>
+        <div class="footer_links_middle">
+            <h6 class="transform_uppercase">ABOUT ESTRAVA</h6>
+            <ul>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+            </ul>
+        </div>
+        <div class="footer_links_right">
+            <h6 class="transform_uppercase">SERVICES</h6>
+            <ul>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+                <li><a href="#">a link</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
