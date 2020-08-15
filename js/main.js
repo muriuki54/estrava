@@ -10,6 +10,7 @@ let navigation = document.querySelector('#navigation'),
     searchBox = document.querySelector('#search_textbox'),
     searchTerm = document.querySelectorAll('.search_term'),
     searchResults = document.querySelector('.search_results'),
+    closeSearchResults = document.querySelector('.close_search_results'),
 
     productCards = document.querySelectorAll('.products_on_sale_card'),
 
@@ -44,7 +45,6 @@ window.addEventListener('scroll', function(e) {
         }
     }
 })
-
 
 // ADD OPAQUE BACKGROUND WHEN SCREEN IS LESS THAN 1100PX
 window.addEventListener('resize', function() {
@@ -117,6 +117,11 @@ searchBox.addEventListener('keyup', function(e) {
     searchTerm.forEach((span, index) => {
         span.innerText = e.target.value
     })
+})
+
+closeSearchResults.addEventListener('click', function() {
+    searchBox.value = ''
+    displaySearchResults()
 })
 
 // SHOW ADD_TO_FAVORITE ICON WHEN CARD IS HOVERED
