@@ -12,6 +12,8 @@ let navigation = document.querySelector('#navigation'),
     searchResults = document.querySelector('.search_results'),
     closeSearchResults = document.querySelector('.close_search_results'),
 
+    heroSection = document.querySelector('#hero_section'),
+
     productCards = document.querySelectorAll('.products_on_sale_card'),
 
     productCardsContainers = document.querySelectorAll('#home_products_on_sale'),
@@ -143,6 +145,11 @@ productCards.forEach((card, index) => {
 
 window.addEventListener('load', function() {
     let navWidth = document.getElementById("navigation").offsetWidth
+    let navHeight = navigation.offsetHeight
+
+    // hero section margin top ??? not sure whats happening here myself -15px ?? wtf
+    heroSection.style.marginTop = `${-navHeight - 15}px`
+
     if(navWidth <= 1100) {
         navigation.classList.add('opaque_bg')
     } else {

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrava</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    
+    <header id="navigation">
+
+        <div class="container">
+            <!------------- top navigation--------------------------------->
+            <div class="navigation_top_banner py-3">
+                <div class="logo">
+                    
+                    <div class="expand_menu_button">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <h2>ESTRAVA</h2>
+                </div>
+                <!---------------------->
+                <!-- <div class="navigation_top_banner_search_form_and_icons"> -->
+                    <div class="navigation_top_banner_search_form">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="" id="search_textbox" aria-label="Search" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon"><span class="material-icons">search</span></button>
+                            </div>
+                            <!----search results ----------->
+                            <div class="search_results">
+                                <div class="product_results">
+                                    <h6>Product results for: <span class="search_term"></span></h6>
+                                    <ul class="product_results_list">
+                                        <li class="product_results_list_item"><a href="#"><span class="material-icons">link</span> product item</a></li>
+                                        <li class="product_results_list_item"><a href="#"><span class="material-icons">link</span> product item</a></li>
+                                        <li class="product_results_list_item"><a href="#"><span class="material-icons">link</span> product item</a></li>
+                                        <li class="product_results_list_item"><a href="#"><span class="material-icons">link</span> product item</a></li>
+                                    </ul>
+                                </div>
+                                <div class="category_results">
+                                    <h6>Category results for: <span class="search_term"> </span></h6>
+                                    <ul class="category_results_list">
+                                        <li class="category_results_list_item"><a href="#"><span class="material-icons">link</span> category item</a></li>
+                                        <li class="category_results_list_item"><a href="#"><span class="material-icons">link</span> category item</a></li>
+                                        <li class="category_results_list_item"><a href="#"><span class="material-icons">link</span> category item</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="close_search_results"><span class="material-icons">cancel</span></div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="navigation_top_banner_icons">
+                        
+                        <a href="#" class="text-dark">
+                            <div class="navigation_top_banner_icon">
+                                <span class="material-icons">favorite_border</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="text-dark">
+                        <div class="navigation_top_banner_icon">
+                            <span class="material-icons">add_shopping_cart</span>
+                            <span class="cart_items_count text-light">2</span>
+                        </div>
+                        </a>
+
+                        <a href="#" class="text-dark">
+                            <div class="navigation_top_banner_icon">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                        </a>
+
+                    </div>
+                <!-- </div> -->
+                <!---------------------------->
+            </div>
+            <!------------------middle navigation - search form--------------->
+            <div class="navigation_middle_banner">
+                <!-- <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><span class="material-icons">search</span></div></button>
+                      </div>
+                </form> -->
+            </div>
+        </div>
+
+            <!--------------  bottom navigation - mega menu ------------------>
+
+            <div class="navigation_bottom_banner">
+              <ul class="navigation_bottom_banner_parent_list">
+                  <li>
+                      <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span> Home</p>
+                      <ul class="sub_menu">
+                          <li>
+                              <div class="sub_menu_item my-3">
+                                  <div class="sub_menu_item_title"><span class="material-icons">weekend</span> Living room</div>
+                                  <div class="sub_menu_item_items">
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Furniture </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Decorations </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Wallpapers </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Chandeliers </a></div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="sub_menu_item my-3">
+                                  <div class="sub_menu_item_title"><span class="material-icons">kitchen</span> Kitchen</div>
+                                  <div class="sub_menu_item_items">
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Kitchen equipment </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Gourmet </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Special collections </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Kitchen electrical appliances </a></div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="sub_menu_item my-3">
+                                  <div class="sub_menu_item_title"><span class="material-icons">hot_tub</span> Bath essentials</div>
+                                  <div class="sub_menu_item_items">
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Heating and cooling </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Bath </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Decoration </a></div>
+                                        <div class="sub_menu_item_list_item"><a href="#home-item"> Lighting </a></div>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                      </ul>
+                  </li>
+                  <li>
+                      <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Garden</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">wc</span> Garden item  </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">wc</span>  Garden item </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Pets</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">pets</span> Pet items</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                </div>
+                            </div>
+                        </li>
+                       
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">pets</span> pets </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">pets</span> Pet items </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Sport & Leisure</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports_handball</span>  Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports</span> Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports_football</span> Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports_esports</span> Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+              
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Health & Beauty</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">spa</span> Health & Beauty </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">spa</span> Health & Beauty</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">spa</span> Health & Beauty </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Perfumes & Cosmetics</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt</span> Perfumes & Cosmetics </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt</span> Perfumes & Cosmetics</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt</span> Perfumes & Cosmetics </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt </span> Perfumes & Cosmetics </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Fashion & Accessories</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">camera_enhance</span> Fashion & Accessories  </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">camera_enhance</span> Fashion & Accessories </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"> <span class="material-icons">arrow_forward_ios</span>Toys & Fancy Dress</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Toys </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Fancy dress</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item  </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Items </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </li>
+              
+              </ul>  
+            </div>
+
+    </header>
+
+    <!-------- CATEGORY PRODUCTS / FILTER SIDEBAR-------------->
+    <section id="category_products_page">
+        <div class="wrapper">
+            <!----- boostrap row-->
+            <div class="row">
+                <!------ breadcrumb -->
+                <div class="col-md-12 col-sm-12 mt-2">
+                    
+                    <ul class="bread_crumb py-1">
+                        <li class="bread_crumb_item"><a href="./index.html"><small>Home</small></a></li>
+                        <li class="bread_crumb_item"><a href="./category.html"><small>Furniture</small></a></li>
+                    </ul>
+
+                </div>
+                <!--------end breadcrumb-->
+                <!-----------filter ---------------------------->
+                <div class="col-md-2 col-sm-12 p-2">
+                    <h6 class="p-4 bold_heading">Filter selection</h6>
+                    <div class="filter_category_products_form">
+                        <form action="">
+                            <!----a filter option eg: price-->
+                            <div class="filter_category_products_form_option">
+                                <strong class="py-2"><span class="material-icons"> expand_more </span> Price</strong>
+                                <ul class="filter_category_products_form_option_list">
+                                    
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Min</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Min price">
+                                          </div>
+                                    </li>
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Max</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Max price">
+                                          </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!----a filter option eg: color-->
+                            <div class="filter_category_products_form_option">
+                                <strong class="py-2"><span class="material-icons"> expand_more </span> Color</strong>
+                                <ul class="filter_category_products_form_option_list">
+                                    
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">Black</label>
+                                          </div>
+                                    </li>
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">Beige</label>
+                                          </div>
+                                    </li>
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">White</label>
+                                          </div>
+                                    </li>
+                                    <li class="filter_category_products_form_option_listitem"></li>
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">Midnight black?</label>
+                                          </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!----a filter option eg: size-->
+                            <div class="filter_category_products_form_option">
+                                <strong class="py-2"><span class="material-icons"> expand_more </span> Size</strong>
+                                <ul class="filter_category_products_form_option_list">
+                                    
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                            <label class="form-check-label" for="exampleRadios1"> 4 x 6</label>
+                                          </div>
+                                    </li>
+                                    <li class="filter_category_products_form_option_listitem">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                            <label class="form-check-label" for="exampleRadios1"> 5 x 6</label>
+                                          </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                            <button type="submit" class="primary_button submit_filter_options">Sort & filter</button>
+                        </form>
+                    </div>
+                </div>
+                <!---------------products ---------------------->
+                <div class="col-md-10 col-sm-12 p-2">
+                    
+                    <h2 class="p-4 bold_heading">Furniture</h2>
+                    <div class="category_product_cards">
+
+                    <div class="products_on_sale_card">
+                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                        <div class="product_offer small_text"> -10%</div>
+                        <div class="products_on_sale_card_image">
+                            <img src="./img/cat.jpg" alt="">
+                        </div>
+                        <div class="products_on_sale_card_content">
+                            <small class="product_on_sale_category_title small_text">cats</small>
+                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
+                            <hr />
+                            
+                            <small class="previous_product_price small_text">£ 145, 64</small>
+                            <div class="current_product_price"><p>£ 123,45</p></div>
+                             <div class="learn_more_links">
+                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                        <a href="#learnmore" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="products_on_sale_card">
+                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                        <div class="product_offer small_text"> -10%</div>
+                        <div class="products_on_sale_card_image">
+                            <img src="./img/cat.jpg" alt="">
+                        </div>
+                        <div class="products_on_sale_card_content">
+                            <small class="product_on_sale_category_title small_text">cats</small>
+                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
+                            <hr />
+                            
+                            <small class="previous_product_price small_text">£ 145, 64</small>
+                            <div class="current_product_price"><p>£ 123,45</p></div>
+                             <div class="learn_more_links">
+                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                        <a href="#learnmore" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="products_on_sale_card">
+                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                        <div class="product_offer small_text"> -10%</div>
+                        <div class="products_on_sale_card_image">
+                            <img src="./img/cat.jpg" alt="">
+                        </div>
+                        <div class="products_on_sale_card_content">
+                            <small class="product_on_sale_category_title small_text">cats</small>
+                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
+                            <hr />
+                            
+                            <small class="previous_product_price small_text">£ 145, 64</small>
+                            <div class="current_product_price"><p>£ 123,45</p></div>
+                             <div class="learn_more_links">
+                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                        <a href="#learnmore" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="products_on_sale_card">
+                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                        <div class="product_offer small_text"> -10%</div>
+                        <div class="products_on_sale_card_image">
+                            <img src="./img/cat.jpg" alt="">
+                        </div>
+                        <div class="products_on_sale_card_content">
+                            <small class="product_on_sale_category_title small_text">cats</small>
+                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
+                            <hr />
+                            
+                            <small class="previous_product_price small_text">£ 145, 64</small>
+                            <div class="current_product_price"><p>£ 123,45</p></div>
+                             <div class="learn_more_links">
+                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                        <a href="#learnmore" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="products_on_sale_card">
+                        <div class="add_to_favorites"><a href="#"><span class="material-icons">favorite</span></a></div>
+                        <div class="product_offer small_text"> -10%</div>
+                        <div class="products_on_sale_card_image">
+                            <img src="./img/cat.jpg" alt="">
+                        </div>
+                        <div class="products_on_sale_card_content">
+                            <small class="product_on_sale_category_title small_text">cats</small>
+                            <div class="product_title"><strong>Shrodingers' cat</strong></div>
+                            <hr />
+                            
+                            <small class="previous_product_price small_text">£ 145, 64</small>
+                            <div class="current_product_price"><p>£ 123,45</p></div>
+                             <div class="learn_more_links">
+                                        <a href="#addtocart" class="learn_more_link buy_product">Buy <span class="material-icons">add_task</span></a>
+                                        <a href="#learnmore" class="learn_more_link view_product">View <span class="material-icons">arrow_forward</span></a>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="pagination">
+                   <a href="./category.html?page1"><button class="primary_button ml-2">1</button></a>
+                   <a href="./category.html?page2"><button class="primary_button ml-2">2</button></a>
+                   <a href="./category.html?page3"><button class="primary_button ml-2">3</button></a>
+                   <a href="./category.html?page4"><button class="primary_button ml-2">4</button></a>
+                   
+                   <a href="./category.html?page49"><button class="primary_button ml-2">Last</button></a>
+                </div>
+            </div>
+                <!--- end products-->
+            </div>
+            <!-- end bootstrap row-->
+        </div>
+    </section>
+
+    <!---------FOOTER ------------->
+    <footer>
+        <div class="container">
+        <div class="footer_logo">
+            <h1>ESTRAVA</h1>
+
+            <div class="footer_social">
+                <strong class="transform_uppercase">SOCIAL</strong>
+                <div class="footer_social_icons">
+                    <div class="facebook_icon"><span class="material-icons">facebook</span></div>
+                    <div class="rss_icon"><span class="material-icons">rss_feed</span></div>
+                    <div class="connect_icon"><span class="material-icons">connect_without_contact</span></div>
+                    <div class="notification_icon"><span class="material-icons">notifications_active</span></div>
+                </div>
+            </div>
+    
+        </div>
+
+       
+        <div class="footer_links">
+            <div class="footer_links_left">
+                <h6 class="transform_uppercase">ORDER INFORMATION</h6>
+                <ul>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_middle">
+                <h6 class="transform_uppercase">ABOUT ESTRAVA</h6>
+                <ul>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_right">
+                <h6 class="transform_uppercase">SERVICES</h6>
+                <ul>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                    <li><a href="#">a link</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
