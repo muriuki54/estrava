@@ -504,7 +504,7 @@ ul {
     position: absolute;
     top: 10px;
     right: 10px;
-    display: none;
+    /* display: none; */
     
 }
 
@@ -514,7 +514,7 @@ ul {
 }
 
 .add_to_favorites a {
-    color: var(--grey) !important;
+    color: rgb(252, 93, 93) !important;
     transition: 0.6s ease-in-out;
     -webkit-transition: 0.6s ease-in-out;
     -moz-transition: 0.6s ease-in-out;

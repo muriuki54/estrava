@@ -125,6 +125,7 @@ closeSearchResults.addEventListener('click', function() {
 })
 
 // SHOW ADD_TO_FAVORITE ICON WHEN CARD IS HOVERED
+/*
 productCards.forEach((card, index) => {
     card.addEventListener('mouseenter', function() {
         card.classList.add('focused')
@@ -136,6 +137,7 @@ productCards.forEach((card, index) => {
         }
     })
 })
+*/
 
 // TRANSLATE THE CAROUSEL ON THE X AXIS
 
