@@ -1,5 +1,12 @@
 let navigation = document.querySelector('#navigation'),
 
+    toggleExpandMenuButton = document.querySelector('.expand_menu_button'),
+    navigationBottomBanner = document.querySelector('.navigation_bottom_banner'),
+    parentMenuList = document.querySelector('.navigation_bottom_banner_parent_list'),
+    expandMenuListIcon = document.querySelectorAll('.navigation_bottom_banner_parent_list_title span'),
+    parentMenuListItem = document.querySelectorAll('.navigation_bottom_banner_parent_list li'),
+    subMenus = document.querySelectorAll('.sub_menu'),
+
     productCards = document.querySelectorAll('.products_on_sale_card'),
 
     productCardsContainers = document.querySelectorAll('#home_products_on_sale'),
@@ -25,7 +32,7 @@ let navigation = document.querySelector('#navigation'),
 window.addEventListener('scroll', function(e) {
     let top = this.scrollY
 
-    if(top !== 0) {
+    if(top !== 0 || checkCurrentNavWidth() <= 1100) {
         navigation.classList.add('opaque_bg')
     } else {
         if(navigation.classList.contains('opaque_bg')) {
@@ -33,6 +40,60 @@ window.addEventListener('scroll', function(e) {
         }
     }
 })
+
+
+// ADD OPAQUE BACKGROUND WHEN SCREEN IS LESS THAN 1100PX
+window.addEventListener('resize', function() {
+    let Width = checkCurrentNavWidth()
+    if(Width <= 1100) {
+        navigation.classList.add('opaque_bg')
+    } else {
+        if(navigation.classList.contains('opaque_bg')) {
+            navigation.classList.remove('opaque_bg')
+        }
+    }
+})
+
+// function to check width of the nav
+function checkCurrentNavWidth() {
+    let navWidth = document.getElementById("navigation").offsetWidth
+    return navWidth;
+}
+
+// TOGGLE EXPAND MENU
+toggleExpandMenuButton.addEventListener('click', function() {
+   parentMenuList.classList.toggle('reveal_parent_list')
+})
+
+
+// SHOW THE SUB MENU ITEMS WHE THE ICON IS CLICKED ( on small screens )
+expandMenuListIcon.forEach((icon, index) => {
+    icon.addEventListener('click', function() {
+        if(checkCurrentNavWidth() <= 1100) {
+            icon.classList.toggle('transform_icon')
+            subMenus[index].classList.toggle('show_sub_menu')
+
+            // remove position fixed on the navigation
+            navigation.classList.toggle('remove_fixed')
+        }
+    })
+})
+
+// SHOW SUB MENU ITEMS ON MOUSEOVER ( on bigger screens )
+parentMenuListItem.forEach((item, index) => {
+    item.addEventListener('mouseenter', function() {
+        if(checkCurrentNavWidth() >= 1100) {
+            item.classList.add('reveal_sub_menu')
+        }
+    })
+
+    item.addEventListener('mouseleave', function() {
+        if(item.classList.contains('reveal_sub_menu')){
+            item.classList.remove('reveal_sub_menu')
+        }
+    })
+})
+
 
 // SHOW ADD_TO_FAVORITE ICON WHEN CARD IS HOVERED
 productCards.forEach((card, index) => {
@@ -49,8 +110,17 @@ productCards.forEach((card, index) => {
 
 // TRANSLATE THE CAROUSEL ON THE X AXIS
 
-//set the width of the parent carousel container
 window.addEventListener('load', function() {
+    let navWidth = document.getElementById("navigation").offsetWidth
+    if(navWidth <= 1100) {
+        navigation.classList.add('opaque_bg')
+    } else {
+        if(navigation.classList.contains('opaque_bg')) {
+            navigation.classList.remove('opaque_bg')
+        }
+    }
+    
+    //set the width of the parent carousel container
     productsCarousel1.style.width = `${(productCards1.length) * 250}px`
     productsCarousel2.style.width = `${(productCards2.length) * 250}px`
     productsCarousel3.style.width = `${(productCards3.length) * 250}px`

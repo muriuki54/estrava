@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrava</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -16,37 +16,41 @@
             <!------------- top navigation--------------------------------->
             <div class="navigation_top_banner py-3">
                 <div class="logo"><h2>ESTRAVA</h2></div>
-
-                <div class="navigation_top_banner_search_form">
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon"><span class="material-icons">search</span></button>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="navigation_top_banner_icons">
-                    <a href="#" class="text-dark">
-                        <div class="navigation_top_banner_icon">
-                            <span class="material-icons">favorite_border</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="text-dark">
-                    <div class="navigation_top_banner_icon">
-                        <span class="material-icons">add_shopping_cart</span>
-                        <span class="cart_items_count text-light">2</span>
+                <!---------------------->
+                <!-- <div class="navigation_top_banner_search_form_and_icons"> -->
+                    <div class="navigation_top_banner_search_form">
+                        <div class="expand_menu_button"><span class="material-icons">menu</span></div>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon"><span class="material-icons">search</span></button>
+                            </div>
+                        </form>
                     </div>
-                    </a>
 
-                    <a href="#" class="text-dark">
+                    <div class="navigation_top_banner_icons">
+                        <a href="#" class="text-dark">
+                            <div class="navigation_top_banner_icon">
+                                <span class="material-icons">favorite_border</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="text-dark">
                         <div class="navigation_top_banner_icon">
-                            <span class="material-icons">account_circle</span>
+                            <span class="material-icons">add_shopping_cart</span>
+                            <span class="cart_items_count text-light">2</span>
                         </div>
-                    </a>
+                        </a>
 
-                </div>
+                        <a href="#" class="text-dark">
+                            <div class="navigation_top_banner_icon">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                        </a>
+
+                    </div>
+                <!-- </div> -->
+                <!---------------------------->
             </div>
             <!------------------middle navigation - search form--------------->
             <div class="navigation_middle_banner">
@@ -62,9 +66,9 @@
             <!--------------  bottom navigation - mega menu ------------------>
 
             <div class="navigation_bottom_banner">
-              <ul>
+              <ul class="navigation_bottom_banner_parent_list">
                   <li>
-                      <p>Home decor</p>
+                      <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span> Home</p>
                       <ul class="sub_menu">
                           <li>
                               <div class="sub_menu_item my-3">
@@ -103,16 +107,16 @@
                       </ul>
                   </li>
                   <li>
-                      <p>Fashion and accessories</p>
+                      <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Garden</p>
                     <ul class="sub_menu">
                         <li>
                             <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">watch</span> fashion items </div>
+                                <div class="sub_menu_item_title"><span class="material-icons">wc</span> fashion items </div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
                                 </div>
                             </div>
                         </li>
@@ -120,108 +124,269 @@
                             <div class="sub_menu_item my-3">
                                 <div class="sub_menu_item_title"><span class="material-icons">wc</span> fashion items</div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Garden item </a></div>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <p>For the kids</p>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Pets</p>
                     <ul class="sub_menu">
                         <li>
                             <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">face</span> Babies and chidren</div>
+                                <div class="sub_menu_item_title"><span class="material-icons">pets</span> Pet items</div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Furniture </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Decorations </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Wallpapers </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Chandeliers </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
                                 </div>
                             </div>
                         </li>
                        
                         <li>
                             <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Toys and games </div>
+                                <div class="sub_menu_item_title"><span class="material-icons">pets</span> pets </div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
                                 </div>
                             </div>
                         </li>
 
                         <li>
                             <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">school</span> School supplies </div>
+                                <div class="sub_menu_item_title"><span class="material-icons">pets</span> Pet items </div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Pet items </a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Sport & Leisure</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports_handball</span>  Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports</span> Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports_football</span> Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sports_esports</span> Sport & Leisure </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Sport & Leisure item </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+              
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Health & Beauty</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">spa</span> Health & Beauty </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">spa</span> Health & Beauty</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">spa</span> Health & Beauty </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Health & Beauty item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Perfumes & Cosmetics</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt</span> Perfumes & Cosmetics </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt</span> Perfumes & Cosmetics</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt</span> Perfumes & Cosmetics </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">sentiment_satisfied_alt </span> Digital equipment </div>
+                                <div class="sub_menu_item_items">
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+                                    <div class="sub_menu_item_list_item"><a href="#home-item"> Perfumes & Cosmetics </a></div>
+
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <p>Devices</p>
+                    <p class="navigation_bottom_banner_parent_list_title"><span class="material-icons">arrow_forward_ios</span>Fashion & Accessories</p>
                     <ul class="sub_menu">
                         <li>
                             <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">settings_cell</span> Mobile phones </div>
+                                <div class="sub_menu_item_title"><span class="material-icons">camera_enhance</span> Fashion & Accessories  </div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Smart phones </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Iphones </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Invisiphones </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Tablets </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">computer</span> Computers</div>
+                                <div class="sub_menu_item_title"><span class="material-icons">camera_enhance</span> Fashion & Accessories </div>
                                 <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Desktop computers </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Laptops </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Monitors </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> CPUs </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Fashion and accessories item </a></div>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">mouse</span> Peripherals </div>
-                                <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Printers </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Mice </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Keyboards </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> GPUs </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> External drives </a></div>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="sub_menu_item my-3">
-                                <div class="sub_menu_item_title"><span class="material-icons">party_mode</span> Digital equipment </div>
-                                <div class="sub_menu_item_items">
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Photography </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Videography </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Power storage </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Sound </a></div>
-                                      <div class="sub_menu_item_list_item"><a href="#home-item"> Game consoles </a></div>
-
-                                </div>
-                            </div>
-                        </li>
+                        
                     </ul>
                 </li>
+                <li>
+                    <p class="navigation_bottom_banner_parent_list_title"> <span class="material-icons">arrow_forward_ios</span>Toys & Fancy Dress</p>
+                    <ul class="sub_menu">
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Toys </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Fancy dress</div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item  </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sub_menu_item my-3">
+                                <div class="sub_menu_item_title"><span class="material-icons">toys</span> Items </div>
+                                <div class="sub_menu_item_items">
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+                                      <div class="sub_menu_item_list_item"><a href="#home-item"> toys and fancy dress item </a></div>
+
+                                </div>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </li>
+              
               </ul>  
             </div>
 
@@ -233,7 +398,6 @@
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -266,7 +430,7 @@
     <!--------------products on sale ------------------>
     <section id="home_products_on_sale" class="mb-5">
         <div class="container">
-            <h2 class="py-4 bold_heading">Products on Sale</h2>
+            <h2 class="p-4 bold_heading">Products on Sale</h2>
               <!---- carousel controls ----------->
               <div class="product_on_sale_cards_controls">
                 <div class="previous_control carousel_1_previous_control">
@@ -469,7 +633,7 @@
     <!--------------featured products ------------------>
     <section id="home_products_on_sale" class="mb-5">
         <div class="container">
-            <h2 class="py-4 bold_heading">Featured Products</h2>
+            <h2 class="p-4 bold_heading">Featured Products</h2>
               <!---- carousel controls ----------->
               <div class="product_on_sale_cards_controls">
                 <div class="previous_control carousel_2_previous_control">
@@ -672,7 +836,7 @@
      <!--------------featured products ------------------>
      <section id="home_products_on_sale" class="mb-5">
         <div class="container">
-            <h2 class="py-4 bold_heading">Popular Products</h2>
+            <h2 class="p-4 bold_heading">Popular Products</h2>
               <!---- carousel controls ----------->
               <div class="product_on_sale_cards_controls">
                 <div class="previous_control carousel_3_previous_control">
