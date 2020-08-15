@@ -62,6 +62,7 @@ function checkCurrentNavWidth() {
 
 // TOGGLE EXPAND MENU
 toggleExpandMenuButton.addEventListener('click', function() {
+    toggleExpandMenuButton.classList.toggle('close')
    parentMenuList.classList.toggle('reveal_parent_list')
 })
 
