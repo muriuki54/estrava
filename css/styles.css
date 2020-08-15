@@ -11,11 +11,13 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #444;
 }
 
 a,
 a:hover  {
     text-decoration: none;
+    color: #444 !important;
 }
 
 .bold_heading {
@@ -174,7 +176,7 @@ ul {
 }
 
 #navigation.opaque_bg .navigation_top_banner_icon span{
-    color: #838383;
+    color: #262626;
 }
 .navigation_top_banner_icon:hover {
     transform: scale(1.2);
@@ -480,7 +482,7 @@ ul {
 
 a.learn_more_link {
     padding: 8px 20px;
-    color: #fff;
+    color: #fff !important;
     font-size: 12px;
     display: flex;
     justify-content: center;
