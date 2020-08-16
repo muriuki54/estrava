@@ -479,20 +479,24 @@
                 
                 <h2 class="bold_heading product_price"> £ 50</h2>
 
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>option</option>
-                      <option>option</option>
-                    </select>
-                  </div>
+                <!---- product variable options ---->
+                <form action="">
 
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Variable options</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Select variable option</option>
+                      <option value="">canine</option>
+                      <option value="">molar</option>
+                    </select>
+                </div>
+                <!------- in stock status -->
                 <div class="stock_count_status">
                     <div class="in_stock_status"><span class="material-icons">check_circle_outline</span>in stock</div>
                     <br>
-                    <div class="stock_count text-center"><small class="px-3">4 left, hurry</small></div>
+                    <div class="stock_count text-center"><small class="px-3">4 left, <span>hurry</span></small></div>
                 </div>
-                <form action="">
+                
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="button-addon2">
                         <div class="input-group-append">
@@ -500,7 +504,8 @@
                         </div>
                       </div>
                 </form>
-
+                <!---- end product variable options ---->
+                
                 <h6 class="bold_heading py-2">About Authentic fossilized mosasaur tooth</h6>
                 <p class="py-2">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur asperiores optio veniam quisquam officiis debitis blanditiis repellendus laboriosam tenetur deserunt, voluptates, perferendis eius, porro explicabo dolore architecto distinctio et. Accusantium!

@@ -9,7 +9,7 @@ let parentProductCarouselContainer = document.querySelector('.product_descriptio
 
 
 // set each productImage width to the width of its parentContainer
-window.addEventListener('load', setSizes)
+setSizes()
 window.addEventListener('resize', setSizes)
 
 function setSizes() {
