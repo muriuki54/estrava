@@ -31,6 +31,7 @@ body {
     margin: 0px 5px;
 }
 
+
 .bread_crumb_item:not(:nth-child(1))::before {
     content: '/';
     width: 6px;
@@ -1020,10 +1021,6 @@ footer ul li a {
 
     .bold_heading.p-4 {
         padding: 1rem !important;
-    }
-
-    #hero_section {
-        height: 90vh;
     }
 
     .newletter_form .input-group {
