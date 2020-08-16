@@ -445,46 +445,53 @@
                               <tr>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Product name</th>
-                                <th scope="col">Variants</th>
+                                <!-- <th scope="col">Variants</th> -->
                                 <th scope="col">Unit</th>
                                 <th scope="col">Total</th>
+                                <th scope="col"></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td><input type="number" value="2" name="" class="form-control"></td>
                                 <td><strong>Authentic fossilized mosasaur tooth</strong></td>
-                                <td><span>canine</span>, <span>molar</span></td>
+                                <!-- <td><span>canine</span>, <span>molar</span></td> -->
                                 <td>£ 8</td>
                                 <td>£ 16</td>
+                                <td class="delete_button"><a href="#del:id"><span class="material-icons">highlight_off</span></a></td>
                               </tr>
                               <tr>
                                 <td><input type="number" value="1" name="" class="form-control"></td>
                                 <td><strong>Get in loser doormat</strong></td>
-                                <td><span>grey</span></td>
+                                <!-- <td><span>grey</span></td> -->
                                 <td>£ 70</td>
                                 <td>£ 70</td>
+                                <td class="delete_button"><a href="#del:id"><span class="material-icons">highlight_off</span></a></td>
                               </tr>
                               <tr>
                                 <td><input type="number" value="1" name="" class="form-control"></td>
                                 <td><strong>Chicken arms</strong></td>
-                                <td></td>
+                                <!-- <td></td> -->
                                 <td>£ 17,45</td>
                                 <td>£ 17,45</td>
+                                <td class="delete_button"><a href="#del:id"><span class="material-icons">highlight_off</span></a></td>
                               </tr>
                               <tr>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <!-- <td></td> -->
                                 <td></td>
                                 <td></td>
                               </tr>
                               <tr class="bold_text">
-                                <td>4</td>
+                                <!---- the value in this data attribute will be the data sent to stripe-->
+                                <td data-quantity="4" id="total_quantity">4</td>
                                 <td></td>
+                                <!-- <td></td> -->
                                 <td></td>
-                                <td></td>
-                                <td>£ 103,45</td>
+                                <!---- the value in this data attribute will be the data sent to stripe-->
+                                <td data-total-amount="103.45" id="total_amount_owed">£ 103,45</td>
+                                <td class="delete_button"><a href="#del:id"><span class="material-icons">highlight_off</span></a></td>
                               </tr>
                             </tbody>
                           </table>
@@ -492,7 +499,24 @@
                 </div>
 
                 <div class="col-md-4 col-sm-12">
-                    <h4 class="bold_heading">Proceed to checkout</h4>
+                    <!-- <h4 class="bold_heading">Proceed to checkout</h4> -->
+
+                    <form action="" method="post" id="payment-form">
+                        <div class="form-row">
+                          <label for="card-element">
+                            Credit or debit card
+                          </label>
+                          <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                          </div>
+                      
+                          <!-- Used to display Element errors. -->
+                          <div id="card-errors" role="alert"></div>
+                        </div>
+                      
+                        <button class="primary_button" id="stripe_submit_button" style="width: 100%;">Pay £ <span id="total"></span></button>
+                      </form>
+
                 </div>
 
             <!--- end basket ---->
@@ -566,6 +590,56 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
-<script src="./js/home.js"></script>
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3/"></script>
+<script src="./js/config.js"></script>
+
+<script>
+        const totalAmountOwed = document.getElementById('total_amount_owed').getAttribute('data-total-amount')
+        document.getElementById('total').textContent = totalAmountOwed
+        
+        const total = document.getElementById('stripe_submit_button')
+
+        const {PUBLISHABLE_KEY} = config
+        // Set your publishable key: remember to change this to your live publishable key in production
+        // See your keys here: https://dashboard.stripe.com/account/apikeys
+        const stripe = Stripe(PUBLISHABLE_KEY);
+        const elements = stripe.elements();
+
+        // Custom styling can be passed to options when creating an Element.
+        const style = {
+        base: {
+            // Add your base input styles here. For example:
+            fontSize: '16px',
+            color: '#32325d',
+        },
+        };
+
+        // Create an instance of the card Element.
+        const card = elements.create('card', {style});
+
+        // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element');
+
+        // Create a token or display an error when the form is submitted.
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const {token, error} = await stripe.createToken(card);
+
+        if (error) {
+            // Inform the customer that there was an error.
+            const errorElement = document.getElementById('card-errors');
+            errorElement.textContent = error.message;
+        } else {
+            // Send the token to your server.
+            stripeTokenHandler(token);
+        }
+        });
+        
+    </script>
+  
 </body>
 </html>
