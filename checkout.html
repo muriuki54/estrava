@@ -484,7 +484,7 @@
                                 <td colspan="3" data-quantity="4" id="total_quantity">4</td>
                                 
                                 <!---- the value in this data attribute will be the data sent to stripe-->
-                                <td colspan="2" id="total_amount_owed">£ <span class="all_units_total"></span></td>
+                                <td colspan="2" id="total_amount_owed">£ <span class="all_units_total"> </span></td>
                               </tr>
                             </tbody>
                           </table>
@@ -611,15 +611,15 @@
                 let units = []
 
                 for(let i = 0; i < increaseDecreaseUnitsInputs.length; i++) {
-                    totalUnits[i].textContent = `${Math.round(increaseDecreaseUnitsInputs[i].value * pricePerUnit[i].getAttribute('data-price-per-unit'))}`                
+                    totalUnits[i].textContent = `${(increaseDecreaseUnitsInputs[i].value * pricePerUnit[i].getAttribute('data-price-per-unit')).toFixed(2)}`                
 
                     units.push(Math.round(increaseDecreaseUnitsInputs[i].value * pricePerUnit[i].getAttribute('data-price-per-unit')))
                     function getSum(total, num) {
-                        return total + Math.round(num)
+                        return total + (num)
                     }
 
-                    allUnitsTotal.textContent = units.reduce(getSum, 0)
-                    document.getElementById('total').textContent = units.reduce(getSum, 0)
+                    allUnitsTotal.textContent = units.reduce(getSum, 0).toFixed(2)
+                    document.getElementById('total').textContent = units.reduce(getSum, 0).toFixed(2)
                 } 
             }
 
