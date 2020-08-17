@@ -9,6 +9,7 @@ let parentProductCarouselContainer = document.querySelector('.product_descriptio
 
 
 // set each productImage width to the width of its parentContainer
+// on page load and when the window is resized
 setSizes()
 window.addEventListener('resize', setSizes)
 

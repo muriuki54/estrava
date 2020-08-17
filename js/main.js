@@ -14,7 +14,12 @@ let navigation = document.querySelector('#navigation'),
 
 
 // ADD DARK BACKGROUND TO MENU WHEN SCROLLED
-window.addEventListener('scroll', function(e) {
+// and when resized
+window.addEventListener('scroll', addOpaqueBackground)
+window.addEventListener('resize', addOpaqueBackground)
+
+// function to add opaque bg to the nav on scroll and on small screens
+function addOpaqueBackground() {
     let top = this.scrollY
 
     if(top !== 0 || checkCurrentNavWidth() <= 1100) {
@@ -24,19 +29,7 @@ window.addEventListener('scroll', function(e) {
             navigation.classList.remove('opaque_bg')
         }
     }
-})
-
-// ADD OPAQUE BACKGROUND WHEN SCREEN IS LESS THAN 1100PX
-window.addEventListener('resize', function() {
-    let Width = checkCurrentNavWidth()
-    if(Width <= 1100) {
-        navigation.classList.add('opaque_bg')
-    } else {
-        if(navigation.classList.contains('opaque_bg')) {
-            navigation.classList.remove('opaque_bg')
-        }
-    }
-})
+}
 
 // function to check width of the nav
 function checkCurrentNavWidth() {
@@ -66,12 +59,15 @@ expandMenuListIcon.forEach((icon, index) => {
 
 // SHOW SUB MENU ITEMS ON MOUSEOVER ( on bigger screens )
 parentMenuListItem.forEach((item, index) => {
+    
+    // add reveal_sub_menu on mouseeleave
     item.addEventListener('mouseenter', function() {
         if(checkCurrentNavWidth() >= 1100) {
             item.classList.add('reveal_sub_menu')
         }
     })
 
+    // remove reveal_sub_menu on mouseeleave
     item.addEventListener('mouseleave', function() {
         if(item.classList.contains('reveal_sub_menu')){
             item.classList.remove('reveal_sub_menu')

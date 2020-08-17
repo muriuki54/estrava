@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
-/* GENERAL STYLES */
+/* 1: GENERAL STYLES    */
+/* 2: NAVIGATION        */
+/* 3: HOME PAGE         */
+/* 3: FOOTER            */
+/* 4: CATEGORY PAGE     */
+/* 5: PRODUCTS PAGE     */
+/* 6: CHECKOUT PAGE     */
+
+/* 1: GENERAL STYLES    */
+
 :root {
     --primary_color:  #976ad4; 
     --primary_color_dark: #674399;
@@ -115,13 +124,9 @@ ul {
 }
 /**********************************************/
 
-/* 1: NAVIGATION   */
-/* 2: HERO SECTION */
-/* 3: INTERESTS    */
-
 /**********************************************/
 
-/* 1: NAVIGATION */
+/* 2: NAVIGATION        */
 #navigation {
     position: sticky;
     top: 0;
@@ -475,7 +480,7 @@ ul {
     text-decoration: none;
 }
 
-/* 2: HERO SECTION */
+/* 3: HOME PAGE         */
 
 #hero_section {
     height: 70vh;
@@ -738,7 +743,7 @@ a.learn_more_link:hover::after {
    -o-border-radius: unset;
 }
 
-/** FOOTER  */
+/* 3: FOOTER            */
 footer {
     background: var(--grey);
 }
@@ -808,7 +813,7 @@ footer ul li a {
 }
 
 /**************************************************/
-
+/* 4: CATEGORY PAGE     */
 .category_product_cards {
     display: flex;
     flex-wrap: wrap;
@@ -870,7 +875,8 @@ footer ul li a {
 }
 
 /**************************************************/
-/*  PRODUCTS PAGE  */
+/* 5: PRODUCTS PAGE     */
+
 .product_description_images {
     overflow-x: hidden;
     padding: 0 !important;
@@ -954,7 +960,8 @@ footer ul li a {
 }
 
 /***********************************************/
-/******* CHECK OUT PAGE ************/
+/* 6: CHECKOUT PAGE     */
+
 .basket_items table td input {
     width: 60px;
 }

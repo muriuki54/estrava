@@ -27,6 +27,7 @@ let heroSection = document.querySelector('#hero_section'),
     let navHeight = navigation.offsetHeight
 
     // hero section margin top ??? not sure whats happening here myself -15px ?? wtf
+    // if i don't add this 15px tho, there is a gap on top of the hero-section slider
     heroSection.style.marginTop = `${-navHeight - 15}px`
 
     if(navWidth <= 1100) {
@@ -38,6 +39,7 @@ let heroSection = document.querySelector('#hero_section'),
     }
     
     //set the width of the parent carousel container
+    // 250 is the size of each product card
     productsCarousel1.style.width = `${(productCards1.length) * 250}px`
     productsCarousel2.style.width = `${(productCards2.length) * 250}px`
     productsCarousel3.style.width = `${(productCards3.length) * 250}px`
@@ -52,18 +54,20 @@ let startIndex1 = 0,
 carouselPreviousButton1.addEventListener('click', function() {
     if(startIndex1 === 0) return
     startIndex1--
-    productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
+    // productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
+    translateCarousel(productsCarousel1, startIndex1)
 })
 
 carouselNextButton1.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel1.getBoundingClientRect().right
 
+    // 100px for the paddings
     if((childX + 100) < parentX) return
 
     startIndex1++
-    productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
-
+    // productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
+    translateCarousel(productsCarousel1, startIndex1)
     
 })
 
@@ -71,32 +75,45 @@ carouselNextButton1.addEventListener('click', function() {
 carouselPreviousButton2.addEventListener('click', function() {
     if(startIndex2 === 0) return
     startIndex2--
-    productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
+    // productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
+    translateCarousel(productsCarousel2, startIndex2)
+
 })
 
 carouselNextButton2.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel2.getBoundingClientRect().right
 
+    // 100px for the paddings
     if((childX + 100) < parentX) return
     startIndex2++
-    productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
+    // productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
+    translateCarousel(productsCarousel2, startIndex2)
+
 })
 
 // carousel 3
 carouselPreviousButton3.addEventListener('click', function() {
     if(startIndex3 === 0) return
     startIndex3--
-    productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+    // productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+    translateCarousel(productsCarousel3, startIndex3)
 })
 
 carouselNextButton3.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel3.getBoundingClientRect().right
 
+    // 100px for the paddings
     if((childX + 100) < parentX) return
 
     startIndex3++
-    productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
-    
+    //productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+    translateCarousel(productsCarousel3, startIndex3)
 })
+
+// function to translate the carousel 
+// takes the current carousel and its startIndex as args
+function translateCarousel(carousel, startIndex) {
+    carousel.style.transform = `translateX(${-startIndex * 250}px)`
+}
