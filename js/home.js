@@ -32,6 +32,7 @@ let heroSection = document.querySelector('#hero_section'),
 
     if(navWidth <= 1100) {
         navigation.classList.add('opaque_bg')
+        heroSection.style.marginTop = '0px'
     } else {
         if(navigation.classList.contains('opaque_bg')) {
             navigation.classList.remove('opaque_bg')
