@@ -28,7 +28,12 @@ let heroSection = document.querySelector('#hero_section'),
 
     // hero section margin top ??? not sure whats happening here myself -15px ?? wtf
     // if i don't add this 15px tho, there is a gap on top of the hero-section slider
-    heroSection.style.marginTop = `${-navHeight - 15}px`
+    // also check if screensize is  small to add or remove margin on hero section
+    if(checkCurrentNavWidth() <= 1100) {
+        heroSection.style.marginTop = `0px`
+    } else {
+        heroSection.style.marginTop = `${-navHeight - 15}px`
+    }
 
     if(navWidth <= 1100) {
         navigation.classList.add('opaque_bg')
