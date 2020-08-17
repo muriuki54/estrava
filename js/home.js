@@ -32,7 +32,6 @@ let heroSection = document.querySelector('#hero_section'),
 
     if(navWidth <= 1100) {
         navigation.classList.add('opaque_bg')
-        heroSection.style.marginTop = '0px'
     } else {
         if(navigation.classList.contains('opaque_bg')) {
             navigation.classList.remove('opaque_bg')
@@ -45,6 +44,14 @@ let heroSection = document.querySelector('#hero_section'),
     productsCarousel2.style.width = `${(productCards2.length) * 250}px`
     productsCarousel3.style.width = `${(productCards3.length) * 250}px`
 //})
+
+window.addEventListener('resize', function( ){
+    if(checkCurrentNavWidth() <= 1100) {
+        heroSection.style.marginTop = `0px`
+    } else {
+        heroSection.style.marginTop = `${-navHeight - 15}px`
+    }
+})
 
 // start here ( add + 1 if clicking next, subtract - 1 to go go back)
 let startIndex1 = 0,

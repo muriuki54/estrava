@@ -1028,6 +1028,10 @@ footer ul li a {
         grid-template-columns: repeat(1,1fr);
     }
 
+    #hero_section {
+        height: 50vh;
+    }
+
     .bold_heading {
         font-size: 1.5rem !important;
     }
