@@ -60,3 +60,44 @@ function thumbnailOpacity(startIndex) {
 }
 
 thumbnailOpacity(startIndex)
+
+
+//////////////////////////////////////////////////////////////////////////////
+// RELATED PRODUCTS CAROUSEL
+// carousel 3
+
+let relatedProductsCarouselPreviousButton = document.querySelector('.related_products_carousel_previous_button')
+let relatedProductsCarouselNextButton = document.querySelector('.related_products_carousel_next_button')
+let parentContainer = document.querySelector('.related_products')
+let childContainer = document.querySelector('.product_on_sale_cards')
+let cards = document.querySelectorAll('.products_on_sale_card')
+
+//set the width of the parent carousel container
+// 250 is the size of each product card
+childContainer.style.width = `${(cards.length) * 250}px`
+
+relatedProductsCarouselPreviousButton.addEventListener('click', function() {
+    if(startIndex === 0) return
+    startIndex--
+    // productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+    translateCarousel(childContainer, startIndex)
+})
+
+relatedProductsCarouselNextButton.addEventListener('click', function() {
+    let parentX = parentContainer.getBoundingClientRect().right
+    let childX = childContainer.getBoundingClientRect().right
+    console.log(parentX)
+    console.log(childX)
+
+    if((childX + 100) < parentX) return
+
+    startIndex++
+    //productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
+    translateCarousel(childContainer, startIndex)
+})
+
+// function to translate the carousel 
+// takes the current carousel and its startIndex as args
+function translateCarousel(carousel, startIndex) {
+    carousel.style.transform = `translateX(${-startIndex * 250}px)`
+}

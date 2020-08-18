@@ -1,3 +1,5 @@
+/////////////////////////////////////////////////////
+// I AM VERY SHIT AT EXPLAING STUFF, SORRY FOR THE VAGUE AND MAYBE CONFUSING COMMENTS IN THE CODE (and in general life as well :) )
 let heroSection = document.querySelector('#hero_section'),
 
     productCards = document.querySelectorAll('.products_on_sale_card'),
@@ -75,12 +77,12 @@ carouselNextButton1.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel1.getBoundingClientRect().right
 
-    // 100px for the paddings
-    if((childX + 100) < parentX) return
+    // 250px for the paddings and margins (250 is the size of each card) seems logical 
+    if((childX + 250) < parentX) return
 
     startIndex1++
     // productsCarousel1.style.transform = `translateX(${-startIndex1 * 250}px)`
-    translateCarousel(productsCarousel1, startIndex1)
+    translateCarousel(productsCarousel1, startIndex1, stop)
     
 })
 
@@ -97,11 +99,11 @@ carouselNextButton2.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel2.getBoundingClientRect().right
 
-    // 100px for the paddings
-    if((childX + 100) < parentX) return
+    // 250px for the paddings and margins (250 is the size of each card) seems logical 
+    if((childX + 250) < parentX) return
     startIndex2++
     // productsCarousel2.style.transform = `translateX(${-startIndex2 * 250}px)`
-    translateCarousel(productsCarousel2, startIndex2)
+    translateCarousel(productsCarousel2, startIndex2, stop)
 
 })
 
@@ -117,16 +119,16 @@ carouselNextButton3.addEventListener('click', function() {
     let parentX = productCardsContainers[0].getBoundingClientRect().right
     let childX = productsCarousel3.getBoundingClientRect().right
 
-    // 100px for the paddings
-    if((childX + 100) < parentX) return
+    // 250px for the paddings and margins (250 is the size of each card) seems logical 
+    if((childX + 250) < parentX) return
 
     startIndex3++
     //productsCarousel3.style.transform = `translateX(${-startIndex3 * 250}px)`
-    translateCarousel(productsCarousel3, startIndex3)
+    translateCarousel(productsCarousel3, startIndex3, stop)
 })
 
 // function to translate the carousel 
-// takes the current carousel and its startIndex as args
+// takes the current carousel, its startIndex  and whether the carousel is at the end as args
 function translateCarousel(carousel, startIndex) {
     carousel.style.transform = `translateX(${-startIndex * 250}px)`
 }
